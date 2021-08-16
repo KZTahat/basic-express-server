@@ -6,7 +6,7 @@ const request = supertest(app);
 
 describe("server test", () => {
   it('should send "All Good :)" at /test AP', async () => {
-    let param = "/test";
+    let param = "/";
     let status = 200;
     let message = "All Good :)";
     const response = await request.get(param);

@@ -7,12 +7,14 @@ const internalServerError = require("./errorHandlers/500");
 const logger = require("./middleware/logger.js");
 const validator = require("./middleware/validator.js");
 
+// app.use(axpress.json());
 app.use(logger); // we be used from by all the APs
 
 // Proof Of Life
-app.get("/test", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).send("All Good :)");
 });
+
 
 app.get("/person", validator, (req, res) => {});
 
